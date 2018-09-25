@@ -3,7 +3,7 @@
 def episode_picker
   my_files = []
   Dir.foreach("/Users/Ryan/Documents/GitHub/videos") do |file|
-    next if file == "." or file == ".."
+    next if file == "." or file == ".." # ignores default hidden files created by Mac OS
     my_files << file
   end
   system %{open "/Users/Ryan/Documents/GitHub/videos/#{my_files.sample}"}
